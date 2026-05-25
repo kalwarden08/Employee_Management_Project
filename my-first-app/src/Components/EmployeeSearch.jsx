@@ -14,7 +14,7 @@ function EmployeeSearch() {
       return;
     }
     try {
-      const response = await axios.get(`http://localhost:8080/emp/get/${searchId}`);
+      const response = await axios.get(`https://employee-management-project-zm0m.onrender.com/emp/get/${searchId}`);
       if (response.data) {
         setSearchedUser(response.data);
         toast.success("Employee found");
@@ -33,7 +33,7 @@ function EmployeeSearch() {
       return;
     }
     try {
-      await axios.delete(`http://localhost:8080/emp/delete/${id}`);
+      await axios.delete(`https://employee-management-project-zm0m.onrender.com/emp/delete/${id}`);
       toast.success("Employee deleted successfully");
       setSearchedUser(null);
     } catch (error) {

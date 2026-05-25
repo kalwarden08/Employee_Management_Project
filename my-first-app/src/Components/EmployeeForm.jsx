@@ -14,7 +14,7 @@ function EmployeeForm() {
 
   useEffect(() => {
     if (isEdit) {
-      axios.get(`http://localhost:8080/emp/get/${id}`)
+      axios.get(`https://employee-management-project-zm0m.onrender.com/emp/get/${id}`)
         .then(response => {
           if (response.data) {
             setName(response.data.name);
@@ -42,10 +42,10 @@ function EmployeeForm() {
 
     try {
       if (isEdit) {
-        await axios.put(`http://localhost:8080/emp/update/${id}`, empDetails);
+        await axios.put(`https://employee-management-project-zm0m.onrender.com/emp/update/${id}`, empDetails);
         toast.success("Details Updated Successfully");
       } else {
-        await axios.post("http://localhost:8080/emp/add", empDetails);
+        await axios.post("https://employee-management-project-zm0m.onrender.com/emp/add", empDetails);
         toast.success("Details Sent Successfully");
       }
       navigate("/");
