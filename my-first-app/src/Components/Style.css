@@ -1,0 +1,10 @@
+button{
+    backgound-color: rgba(0, 0, 255, 0.559);
+    color: #fff;   
+    border-radius: 5px; 
+}
+button:hover{
+    background-color: #fff;
+    color: rgb(0, 0, 255);
+
+}
